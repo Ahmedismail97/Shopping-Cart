@@ -36,7 +36,7 @@ defmodule ShoppingCartApiWeb.Endpoint do
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
   plug CORSPlug,
-    origin: ["http://localhost:8080"],
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST"],
     headers: ["Authorization", "Content-Type"],
     expose: ["X-My-Custom-Header"],
