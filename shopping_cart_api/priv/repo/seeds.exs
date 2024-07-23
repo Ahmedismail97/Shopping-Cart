@@ -42,7 +42,7 @@ products = [
     description: "The best earbuds for developers",
     price: 250,
     quantity: 30
-  },
+  }
 ]
 
 Enum.each(products, fn product ->

@@ -25,7 +25,7 @@ defmodule ShoppingCartApiWeb.ProductController do
     render(conn, :show, product: product)
   end
 
-def confirm_purchase(conn, %{"items" => items}) do
+  def confirm_purchase(conn, %{"items" => items}) do
     with {:ok, _} <- Products.confirm_purchase(items) do
       send_resp(conn, :no_content, "")
     end
