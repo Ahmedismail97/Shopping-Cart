@@ -60,14 +60,23 @@ the Backend API
     ```
 
 4. Start the Phoenix server:
-    ```sh
+    ```sh 
     mix phx.server
     ```
 
 ### Frontend (VueJS)
-
-For the frontend setup, refer to the `README` file in the frontend directory of this repository.
-
+1. cd to the frontend folder:
+    ```sh
+    cd Shopping-Cart/shopping_cart_frontend
+    ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the project:
+   ```sh
+   npm run dev
+   ```
 ## Usage
 
 Once the server is running, you can access the API at `http://localhost:4000/api`. You can use tools like `Postman` or `cURL` to interact with the API endpoints.
