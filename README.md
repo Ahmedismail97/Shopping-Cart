@@ -20,11 +20,14 @@ This repository contains the backend API for a simple shopping cart application,
 
 ## Features
 
-- User authentication and authorization
-- CRUD operations for products
-- Shopping cart management
-- Order processing
-- Integration with PostgreSQL database
+1. View Products: Users should be able to view a list of available products, including their names, descriptions,
+and prices. This list will come from the Backend API.
+2. View Shopping Cart: Users should be able to view the items currently in their shopping cart, including the
+product details and the total price.
+3. Add Item to Cart: Users should be able to add a product to their shopping cart.
+4. Confirm Purchase: Users should be able to confirm the purchase of the items in their shopping cart. This
+action should decrement the quantity of the purchased items in the backend inventory. This operation users
+the Backend API
 
 ## Requirements
 
