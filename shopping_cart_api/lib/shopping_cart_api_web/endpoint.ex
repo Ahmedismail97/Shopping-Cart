@@ -35,6 +35,14 @@ defmodule ShoppingCartApiWeb.Endpoint do
   plug Plug.RequestId
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
+  plug CORSPlug,
+    origin: ["http://localhost:8080"],
+    methods: ["GET", "POST"],
+    headers: ["Authorization", "Content-Type"],
+    expose: ["X-My-Custom-Header"],
+    max_age: 86400,
+    send_preflight_response?: true
+
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
