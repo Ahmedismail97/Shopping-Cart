@@ -51,9 +51,11 @@ export default {
     }
   },
   methods: {
+    // Toggle the visibility of the cart
     toggleCart() {
       this.showCart = !this.showCart
     },
+    // This method is called when the user clicks the "Confirm Purchase" button in the cart component and sends a request to the API to confirm the purchase.
     async confirmPurchase() {
       try {
         await api.confirmPurchase(this.cart)

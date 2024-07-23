@@ -25,24 +25,27 @@
 import api from '@/services/api'
 
 export default {
+  //The data() method returns an object with a single property, products, which is an empty array. This array will be populated with the products fetched from the API.
   data() {
     return {
       products: []
     }
   },
+  //The created() lifecycle hook is called when the component is created. In this hook, we call the fetchProducts() method to fetch the products from the API.
   created() {
     this.fetchProducts()
   },
   methods: {
+    //The fetchProducts() method makes an API request to fetch the products and populates the products array with the response data.
     async fetchProducts() {
       try {
         const response = await api.getProducts()
-        console.log('response', response)
-        this.products = response.data.data
+        this.products = response.data
       } catch (error) {
         console.error('Error fetching products:', error)
       }
     },
+    //The addToCart() method is called when the user clicks the "Add to Cart" button on a product. It emits an event with the product data to notify the parent component that a product has been added to the cart.
     addToCart(product) {
       this.$emit('add-to-cart', product)
     }
